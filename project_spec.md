@@ -11,45 +11,44 @@
 
 ### Description 
 
-CookingMate is an AI-powered recipe assistant that helps users discover personalized recipes through natural conversation and organize them in a personal recipe book. Users chat with an AI to find recipes based on available ingredients, dietary preferences, or meal ideas, then save their favorites to a searchable recipe collection with detailed ingredients and cooking instructions.
+CookingMate is an AI-powered recipe assistant that helps users discover recipes through natural conversation. Users chat with an AI to find recipes based on available ingredients, dietary preferences, or meal ideas, then tap to view detailed recipe information including ingredients and step-by-step cooking instructions.
 
 ### App Evaluation
 
 - **Category:** Food & Drink / Lifestyle
-- **Mobile:** Mobile is essential for accessing the AI chatbot and recipes while actively cooking in the kitchen. Users get real-time recipe suggestions through conversational interaction. The app provides on-the-go access to saved recipes when grocery shopping or planning meals away from home.
-- **Story:** Eliminates the daily "What should I cook?" decision fatigue by making recipe discovery conversational and personalized. Instead of endless scrolling through recipe websites, users simply ask the AI and get immediate suggestions. Creates a personal recipe collection that grows over time with tried-and-true favorites.
-- **Market:** Anyone who cooks at home could utilize this app - approximately 70% of adults cook regularly. Appeals to busy professionals needing quick dinner ideas, college students learning to cook, and home cooks looking to organize their recipes. Freemium model with premium features could be used for monetization.
-- **Habit:** Users interact with the chatbot multiple times per week when planning meals. Daily use during active cooking periods when deciding what to make. Users constantly build and reference their recipe book, making it a regular kitchen companion.
-- **Scope:** V1 allows users to chat with AI for recipe suggestions and view recipe details with ingredients and steps. Could be tested with real users cooking meals. V2 adds ability to save recipes to personal recipe book with search functionality. V3 incorporates filtering and sorting options for saved recipes. V4 adds serving size adjustment and recipe sharing features.
+- **Mobile:** Mobile is essential for accessing the AI chatbot and recipes while actively cooking in the kitchen. Users get real-time recipe suggestions through conversational interaction and can reference recipe details hands-free while preparing meals.
+- **Story:** Eliminates the daily "What should I cook?" decision fatigue by making recipe discovery conversational and personalized. Instead of endless scrolling through recipe websites, users simply ask the AI and get immediate suggestions with full cooking details.
+- **Market:** Anyone who cooks at home could utilize this app - approximately 70% of adults cook regularly. Appeals to busy professionals needing quick dinner ideas, college students learning to cook, and home cooks looking for meal inspiration.
+- **Habit:** Users interact with the chatbot multiple times per week when planning meals. Daily use during active cooking periods when deciding what to make and following recipe instructions.
+- **Scope:** V1 focuses on two core screens: AI chatbot for recipe discovery and recipe detail view with ingredients and steps. This simplified scope is achievable and testable with real users cooking meals. Future versions could add recipe saving, search, and organization features.
 
 ## Product Spec
 
 ### 1. User Features (Required and Optional)
 
-Required Features:
+**Required Features (MVP):**
 
 - **AI Chatbot Interface** - Users can type natural language queries to discover recipes
 - **Recipe Suggestions** - AI responds with personalized recipe recommendations based on queries
 - **Recipe Preview Cards** - Visual recipe cards displayed in chat with images, time, and difficulty
-- **View Recipe Details** - Tap recipe card to see full ingredients and step-by-step instructions
-- **Save Recipes** - Bookmark recipes from detail view to personal recipe book
-- **Recipe Book Grid** - Visual library displaying all saved recipes with images
-- **Search Saved Recipes** - Search through saved recipes by name or ingredient
-- **Ingredient Checklist** - Interactive checkboxes to mark off ingredients while cooking (TBD)
-- **Cooking Steps** - Numbered step-by-step instructions with tab navigation
+- **View Recipe Details** - Tap "View Recipe" button to navigate to recipe detail screen
+- **Recipe Hero Image** - Large appetizing photo of the finished dish
+- **Recipe Metadata** - Display cooking time, servings, and difficulty level with clear icons
+- **Ingredients Tab** - List of all required ingredients with quantities
+- **Steps Tab** - Numbered step-by-step cooking instructions
+- **Tab Navigation** - Switch between Ingredients and Steps views
+- **Back Navigation** - Return to chatbot from recipe detail screen
 
-Stretch Features:
+**Stretch Features (Future Versions):**
 
-- **Voice Input** - Speak queries instead of typing for hands-free interaction
-- **Camera Integration** - Take photos of ingredients for AI identification
-- **Filter Recipes** - Filter by meal type, dietary restrictions, cooking time, difficulty
-- **Sort Options** - Sort recipes by newest, alphabetical, or cooking time
-- **Serving Adjustment** - Scale recipe ingredients based on number of servings
-- **Share Recipes** - Share recipe details with friends via text/social media
-- **Dark/Light Mode Toggle** - Switch between dark and light theme
-- **Recipe Collections** - Organize saved recipes into custom folders/categories
-- **Cooking Timer Integration** - Built-in timers for cooking steps
-- **Offline Mode** - Access saved recipes without internet connection
+- **Save Recipes** - Bookmark recipes to a personal collection
+- **Recipe Book** - View grid of saved recipes
+- **Search Functionality** - Search through saved recipes
+- **Voice Input** - Speak queries instead of typing
+- **Ingredient Checklist** - Interactive checkboxes to mark off ingredients
+- **Serving Adjustment** - Scale recipe ingredients based on servings
+- **Share Recipes** - Share recipe details with friends
+
 
 ### 2. Chosen API(s)
 
@@ -77,66 +76,86 @@ Stretch Features:
 Required Feature
 
 - **User opens app**
-  - => App launches to AI Chat screen with welcome message
-  - => Bottom navigation shows Chat and Recipe Book tabs
+  - => App launches directly to AI Chat screen
+  - => AI displays welcome message: "Hi! I'm your cooking assistant. What would you like to make today?"
+  - => Input field ready for user query at bottom
   
-- **User types "What can I make with chicken and rice?"**
-  - => AI processes query and displays thinking indicator
-  - => AI responds with conversational text and recipe suggestion
-  - => Recipe card appears with image, title, time, and "View Recipe" button
+- **User types "What can I make with chicken?"**
+  - => AI processes query and displays thinking indicator (loading animation)
+  - => AI responds with conversational text: "Great question! Here's a popular recipe for you:"
+  - => Recipe card appears in chat with:
+    - Large appetizing food photo
+    - Recipe title (e.g., "Classic Lemon Herb Roasted Chicken")
+    - Quick info: "1 hr 15 min • Easy"
+    - Teal "View Recipe" button
   
-- **User taps "View Recipe" on recipe card**
+- **User taps "View Recipe" button on recipe card**
   - => App navigates to Recipe Detail screen
-  - => Displays hero image, recipe title, time, servings, difficulty
-  - => Shows Ingredients tab by default with checkboxes
+  - => Screen displays:
+    - Hero image of finished dish at top
+    - Recipe title below image
+    - Three info cards showing: Total Time (1 hr 15 min), Servings (4 people), Difficulty (Easy)
+    - Tab navigation with "Ingredients" and "Steps" tabs
+    - "Ingredients" tab selected by default
+  
+- **User views Ingredients tab**
+  - => Displays complete list of ingredients with quantities:
+    - "Whole Chicken - 1 (about 4 pounds)"
+    - "Lemons - 2, halved"
+    - "Fresh Rosemary - 4 sprigs"
+    - "Olive Oil - 2 tbsp"
+  - => User can scroll if list is long
   
 - **User taps "Steps" tab**
   - => View switches to numbered cooking instructions
-  - => Each step displays clear, concise directions
+  - => Each step displays clear, concise directions:
+    - Step 1: "Preheat oven to 425°F (220°C). Pat the chicken dry with paper towels."
+    - Step 2: "Stuff the chicken cavity with lemon halves and rosemary sprigs."
+    - Step 3: "Rub the outside of the chicken with olive oil..."
+  - => Instructions include specific temperatures and timing details
   
-- **User taps bookmark/save icon**
-  - => Recipe is added to Recipe Book
-  - => Visual confirmation (toast/snackbar message)
-  - => Bookmark icon fills in to show saved state
+- **User taps back arrow (top left)**
+  - => Returns to Chat screen
+  - => Chat history preserved showing previous conversation and recipe card
+  - => User can ask for another recipe or continue conversation
   
-- **User navigates to Recipe Book tab**
-  - => Displays grid of saved recipe cards with images
-  - => Shows recipe name, time, and difficulty on each card
-  - => If empty, shows "No Saved Recipes Yet" with explore button
+- **User asks follow-up question: "Something quicker?"**
+  - => AI responds: "How about this 30-minute option?"
+  - => New recipe card appears with faster recipe
+  - => User can tap "View Recipe" to see new recipe details
+
+**Additional Interactions:**
+
+- **User scrolls through recipe steps while cooking**
+  - => Steps remain clearly visible and readable
+  - => User can switch back to Ingredients tab to check quantities
   
-- **User taps search icon in Recipe Book**
-  - => Search bar appears at top of screen
-  - => User types recipe name or ingredient
-  - => Recipe grid filters in real-time to show matches
-  
-- **User taps a saved recipe card**
-  - => Opens Recipe Detail screen for that recipe
-  - => User can review ingredients and steps
-  - => User can unsave recipe if desired
-  
-- **User checks off ingredients while shopping**
-  - => Checkbox marks ingredient as obtained
-  - => Visual strikethrough or color change indicates completion
-  - => Progress persists if user leaves and returns
+- **User receives another recipe suggestion in chat**
+  - => Multiple recipe cards can appear in conversation
+  - => Each has its own "View Recipe" button
+  - => User can view any recipe from the chat history
 
 ## Wireframes
 
-<img src="https://i.imgur.com/your-wireframe-url.png" width=600>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%202.png" width=600>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%201.png" width=600>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Chat%20Screen.png" width=600>
 
 *Wireframe includes:*
-- Chat Screen with AI conversation and recipe cards
-- Recipe Book Screen with grid layout of saved recipes
-- Recipe Detail Screen with ingredients, steps, and actions
+- **Screen 1**: Chat interface with AI conversation bubbles and recipe preview cards
+- **Screen 2**: Recipe Detail screen with hero image, metadata, and ingredient/steps tabs
 
 ### [BONUS] Digital Wireframes & Mockups
 
-<img src="https://i.imgur.com/your-mockup-url.png" width=600>
-
 *High-fidelity mockups showing:*
-- ___ theme with ___ accents
-- Chat interface with bubble messages
-- Recipe cards with food photography
-- Recipe detail layout with tabs
+- Orange header (#F5A442) with app title
+- Cream background (#F5E6D3) for warm cooking atmosphere
+- Teal accents (#2D8B8A) for buttons and active states
+- Chat bubbles: AI (white background) vs User (teal background)
+- Recipe cards with rounded corners and drop shadows
+- Large, appetizing food photography
+- Clean typography with clear hierarchy
+- Icon-based metadata display
 
 ### [BONUS] Interactive Prototype
 
@@ -151,18 +170,21 @@ Required Feature
 - **Image Loading:** Coil for efficient image handling
 - **Dependency Injection:** Hilt for clean dependency management
 
-### Key Challenges
-- Integrating AI API efficiently within mobile constraints
-- Designing intuitive chat interface with embedded recipe cards
-- Managing recipe data persistence and sync
-- Optimizing image loading for smooth scrolling
-- Implementing real-time search filtering
+### Technical Architecture
+- **Language:** Kotlin
+- **Architecture:** MVVM (Model-View-ViewModel)
+- **UI:** Jetpack Compose for modern Android UI
+- **Navigation:** Jetpack Navigation Compose for screen transitions
+- **Networking:** Retrofit for API calls
+- **Image Loading:** Coil for efficient image handling
+- **JSON Parsing:** Moshi or Gson for API response parsing
+- **Async Operations:** Kotlin Coroutines for AI and recipe API calls
 
 ### Learning Goals
 - Master Jetpack Compose for modern UI development
-- Learn API integration with multiple services
+- Learn API integration with AI and recipe services
 - Implement clean MVVM architecture
-- Practice Room database operations
+- Practice navigation between screens with data passing
 - Develop conversational AI integration skills
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
