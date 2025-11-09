@@ -137,9 +137,9 @@ Required Feature
 
 ## Wireframes
 
-<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%202.png" width=600>
-<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%201.png" width=600>
-<img src="https://github.com/xlz1047/CookingMate/blob/master/Chat%20Screen.png" width=600>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%202.png" width=100>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Recipe%20Detail%20Screen%201.png" width=100>
+<img src="https://github.com/xlz1047/CookingMate/blob/master/Chat%20Screen.png" width=100>
 
 *Wireframe includes:*
 - **Screen 1**: Chat interface with AI conversation bubbles and recipe preview cards
