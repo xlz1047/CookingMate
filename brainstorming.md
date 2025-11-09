@@ -15,15 +15,15 @@
 
 ### 1. CookingMate
 
-- **Mobile:** Mobile is essential for accessing the AI chatbot and recipes while actively cooking in the kitchen. Users get real-time recipe suggestions and can reference saved recipes when grocery shopping or meal planning away from home.
+- **Mobile:** Mobile is essential for accessing the AI chatbot and recipes while actively cooking in the kitchen. Users get real-time recipe suggestions through conversational interaction and can reference detailed instructions hands-free while preparing meals.
 
-- **Story:** Eliminates the daily "What should I cook?" decision fatigue by making recipe discovery conversational. Instead of scrolling through endless recipe websites, users simply ask the AI and build a personal collection of favorites over time.
+- **Story:** Eliminates the daily "What should I cook?" decision fatigue by making recipe discovery conversational. Instead of scrolling through endless recipe websites, users simply ask the AI and get immediate suggestions with full cooking details including ingredients and step-by-step instructions.
 
-- **Market:** Anyone who cooks at home could utilize this app - approximately 70% of adults cook regularly. Appeals to busy professionals needing quick dinner ideas, college students learning to cook, and home cooks organizing recipes.
+- **Market:** Anyone who cooks at home could utilize this app - approximately 70% of adults cook regularly. Appeals to busy professionals needing quick dinner ideas, college students learning to cook, and home cooks looking for meal inspiration.
 
-- **Habit:** Users interact with the chatbot multiple times per week when planning meals. They constantly build and reference their recipe book, making it a regular kitchen companion.
+- **Habit:** Users interact with the chatbot multiple times per week when planning meals. They use the app during active cooking to reference ingredient lists and follow step-by-step instructions, making it a regular kitchen companion.
 
-- **Scope:** V1 allows users to chat with AI for recipe suggestions and view recipe details. V2 adds ability to save recipes to personal recipe book with search. V3 incorporates filtering and sorting. V4 adds serving adjustment and sharing features.
+- **Scope:** V1 focuses on two core screens: AI chatbot for recipe discovery and recipe detail view with ingredients/steps tabs. This is clearly defined and buildable. V2 could add recipe saving to a personal collection. V3 could incorporate search and filtering. V4 could add serving adjustment and sharing features. The simplified V1 scope is very achievable within our timeline.
 
 ### 2. FitTrack AI
 
@@ -55,10 +55,11 @@
 
 CookingMate is the strongest choice because:
 
-1. **Mobile-first experience**: Essential for real-time recipe discovery while cooking in the kitchen and accessing recipes on-the-go
-2. **Compelling story**: Solves a universal daily problem everyone faces - meal planning and recipe discovery
-3. **Large, well-defined market**: 70% of adults cook regularly with broad demographic appeal
-4. **Strong habit potential**: Multiple uses per week for meal planning with constantly growing recipe collection
-5. **Achievable scope**: Clear V1-V4 progression with technically feasible MVP (AI chat + recipe book)
-
-The app differentiates itself through conversational AI discovery rather than endless scrolling, and the two core features (chatbot and recipe book) create immediate value while remaining buildable within our timeline. Unlike fitness or study apps, cooking is a universal, year-round activity with less ethical complexity and fewer established competitors in the AI-first space.
+1. **Mobile-first experience**: Essential for real-time recipe discovery while cooking in the kitchen and referencing instructions hands-free during meal preparation
+2. **Compelling story**: Solves a universal daily problem everyone faces - meal planning and recipe discovery through natural conversation
+3. **Large, well-defined market**: 70% of adults cook regularly with broad demographic appeal across age groups and skill levels
+4. **Strong habit potential**: Multiple uses per week for meal planning plus active reference during cooking sessions
+5. **Achievable scope**: Clear, simple V1 with just two screens (chat + recipe detail) that delivers immediate value and is technically feasible within our timeline
+6. **Year-round relevance**: Unlike fitness apps with seasonal usage or study apps tied to academic calendars, cooking is a consistent daily need
+7. **Low complexity**: No database required for MVP, no ethical concerns, straightforward API integrations
+8. **Clear differentiation**: AI-first conversational approach differentiates from traditional recipe apps with endless scrolling
