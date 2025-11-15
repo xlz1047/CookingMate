@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">CookingMate</string>
+    <string name="app_name">Meal Planner AI</string>
+
+    <string name="prompt_hi_im_assistant">Hi! I&apos;m your cooking assistant. What would you like to make today?</string>
+    <string name="prompt_ask_for_recipe">Ask for a recipe…</string>
+    <string name="chip_suggest_quick_dinner">Suggest a quick dinner</string>
+    <string name="chip_whats_in_my_pantry">What&apos;s in my pantry?</string>
+
+    <string name="recipe_title_classic_lemon_herb_roasted_chicken">Classic Lemon Herb Roasted Chicken</string>
+    <string name="label_total_time">Total Time</string>
+    <string name="label_servings">Servings</string>
+    <string name="label_difficulty">Difficulty</string>
+    <string name="value_difficulty_easy">Easy</string>
+
+    <string name="tab_ingredients">Ingredients</string>
+    <string name="tab_steps">Steps</string>
+
+    <string name="btn_view_recipe">View Recipe</string>
+    <string name="btn_start_cooking">Start Cooking</string>
+
+    <string name="content_description_recipe_image">Photo of the prepared recipe</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_share">Share recipe</string>
+    <string name="content_description_bookmark">Save recipe</string>
 </resources>
