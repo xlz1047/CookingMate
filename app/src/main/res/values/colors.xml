@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#F6AF4C</color>
+    <color name="colorPrimaryVariant">#E29730</color>
+    <color name="colorSecondary">#106475</color>
+    <color name="colorSecondaryVariant">#90C2CC</color>
+
+    <color name="colorBackground">#F6E8D3</color>
+    <color name="colorSurface">#FFFFFFFF</color>
+    <color name="colorCardPeach">#F6E8D3</color>
+    <color name="colorLightOrange">#F6CB8F</color>
+
+    <color name="colorError">#B00020</color>
+
+    <color name="colorOnPrimary">#FF000000</color>
+    <color name="colorOnSecondary">#FFFFFFFF</color>
+    <color name="colorOnBackground">#FF000000</color>
+    <color name="colorOnSurface">#FF000000</color>
+
+    <color name="textPrimary">#FF000000</color>
+    <color name="textSecondary">#99000000</color>
+
+    <color name="iconTintPrimary">@color/colorSecondary</color>
+    <color name="dividerColor">#1F000000</color>
 </resources>
